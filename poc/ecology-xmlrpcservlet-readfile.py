@@ -19,6 +19,8 @@ def read_file(url,file_path):
             decoded_data = base64.b64decode(base64_data).decode('utf-8')
             print(f"读取的文件是：{file_path}/n")
             print(decoded_data)
+        elif response.status_code ==404:
+            print("该网站不存在漏洞！")
         else:
             print("该网站不存在漏洞 或文件路径错误！")
     except:
